@@ -1,0 +1,20 @@
+window.PromoData={catalog:[
+['Combine X e ganhe 100% off na peça mais barata','Basket Building',7,1.6,'Itens por pedido / UPT'],
+['Combine X e ganhe 50% off na peça mais barata','Basket Building',10,1.9,'Itens por pedido / UPT'],
+['Compre e ganhe (compre 1 peça e ganhe outra)','Basket Building',3,1.2,'Itens por pedido / UPT'],
+['Leve + por − (leve X peças e pague X−1)','Basket Building',4,1.5,'Itens por pedido / UPT'],
+['Desconto progressivo (mais peças + desconto)','Basket Building',3,1.2,'Itens por pedido / UPT'],
+['Placement Frete Grátis (PDP + Item Card)','Redução de barreira',1,1,'PDP → ATC rate'],
+['Placement Entrega next day (PDP + Item Card)','Conveniência',2,1.1,'PDP → ATC rate'],
+['Placement Retire na loja (PDP + Item Card)','Conveniência',2,1.1,'PDP → ATC rate'],
+['Placement X% de cashback no produto (PDP + Item Card)','Value Amplification',3,1.2,'PDP → ATC rate'],
+['Placement X pontos pela compra (PDP + Item Card)','Loyalty / Retenção',4,1.3,'Login rate / adesão ao clube'],
+['Countdown Global 24h Frete Grátis (Régua Ticket médio)','FOMO',1,1,'Time to purchase'],
+['Countdown Global 24h X% OFF Pix','FOMO',2,1.1,'Time to purchase'],
+['Countdown Global 24h Collection FlashSale X% OFF','FOMO',3,1.2,'Collection → PDP / ATC rate'],
+['Placement “X usuários estão vendo esse produto” PDP','FOMO',1,1.3,'PDP → ATC rate'],
+['Placement “Só X unidades restantes” PDP','FOMO',1,1.3,'PDP → ATC rate'],
+['Placements Countdown “Flash sale” PDP','FOMO',1,1.3,'PDP → ATC rate'],
+['MiniCart ProgressBar Brindes a partir de X valor com diferentes brindes','AOV Growth',4,1.3,'AOV'],
+['MiniCart ProgressBar Brinde progressivo cumulativo','AOV Growth',4,1.3,'AOV']
+].map((a,i)=>({id:'m'+(i+1),name:a[0],objective:a[1],complexity:a[2],multiplier:a[3],metric:a[4]}))};
