@@ -5,14 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tabela Editável</title>
 <style>
-  body { font-family: sans-serif; margin: 20px; }
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --border: #999999;
+    --head: #eeeeee;
+    --focus: #4a90e2;
+    --focus-bg: #f5faff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161616;
+      --fg: #eeeeee;
+      --border: #666666;
+      --head: #2a2a2a;
+      --focus: #6aa9f0;
+      --focus-bg: #1f2a38;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161616;
+    --fg: #eeeeee;
+    --border: #666666;
+    --head: #2a2a2a;
+    --focus: #6aa9f0;
+    --focus-bg: #1f2a38;
+  }
+  body { font-family: sans-serif; margin: 0; padding: 20px 16px; background: var(--bg); color: var(--fg); }
+  .wrap { overflow-x: auto; }
   table { border-collapse: collapse; width: 100%; }
-  th, td { border: 1px solid #999; padding: 8px; }
-  th { background: #eee; }
-  td:focus { outline: 2px solid #4a90e2; background: #f5faff; }
+  th, td { border: 1px solid var(--border); padding: 8px; min-width: 80px; }
+  th { background: var(--head); }
+  td:focus, th:focus { outline: 2px solid var(--focus); background: var(--focus-bg); }
 </style>
 </head>
 <body>
+<div class="wrap">
 <table>
   <thead>
     <tr>
@@ -27,5 +55,6 @@
     <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
   </tbody>
 </table>
+</div>
 </body>
 </html>
